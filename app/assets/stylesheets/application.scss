@@ -1,2 +1,8 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+// Components
+@import "components/sidebar";
+
+// Layouts
+@import "layouts/containers";
