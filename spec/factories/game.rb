@@ -2,12 +2,11 @@ require 'faker'
 
 FactoryBot.define do
   factory :game do |f|
-    f.user User.first
-    f.strength rand(1..9)
-    f.agility rand(1..9)
-    f.intelligence rand(1..9)
-    f.will rand(1..9)
-    f. charisma rand(1..9)
+    f.strength 5
+    f.agility 6
+    f.intelligence 3
+    f.will 5
+    f. charisma 8
     f.energy 100
     f.hygiene 100
     f.arousal 0

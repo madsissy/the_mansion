@@ -11,6 +11,20 @@ class Game < ApplicationRecord
 
   ############################################
 
+    # Validations
+      validates :strength, presence: true
+      validates :agility, presence: true
+      validates :intelligence, presence: true
+      validates :charisma, presence: true
+      validates :will, presence: true
+      validates :energy, presence: true
+      validates :hygiene, presence: true
+      validates :feminity, presence: true
+      validates :arousal, presence: true
+
+
+  ############################################
+
     # Methods
 
     # Capped values
