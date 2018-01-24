@@ -1,13 +1,14 @@
 class Users::GamesController < ApplicationController
 
   def index
-    @games = policy_scope[:users, Game]
+    @games = policy_scope([:users, Game])
   end
 
   def new
   end
 
   def create
+    # redirect to new player
   end
 
   def destroy
