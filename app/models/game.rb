@@ -32,5 +32,6 @@ class Game < ApplicationRecord
       self.energy = 100 if energy > 100
       self.arousal = 100 if arousal > 100
       self.feminity = 100 if feminity > 100
+      self.hygiene = 100 if hygiene > 100
     end
 end

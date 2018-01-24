@@ -2,6 +2,7 @@ require 'faker'
 
 FactoryBot.define do
   factory :game do |f|
+    f.user
     f.strength 5
     f.agility 6
     f.intelligence 3
@@ -11,6 +12,6 @@ FactoryBot.define do
     f.hygiene 100
     f.arousal 0
     f.feminity 0
-    f.relation "lol"
+    f.relations ({Bob: 7, John: 8})
   end
 end
