@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20180124094859) do
 
   create_table "games", force: :cascade do |t|
     t.bigint "user_id"
+    t.string "name"
     t.integer "strength"
     t.integer "agility"
     t.integer "will"

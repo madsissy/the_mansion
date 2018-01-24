@@ -21,6 +21,7 @@ class Game < ApplicationRecord
       validates :hygiene, presence: true
       validates :feminity, presence: true
       validates :arousal, presence: true
+      validates :name, presence: true
 
 
   ############################################

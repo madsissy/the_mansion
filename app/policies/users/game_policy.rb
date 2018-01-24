@@ -6,7 +6,7 @@ class Users::GamePolicy < ApplicationPolicy
 
   class Scope < Scope
     def resolve
-      scope.where(user: user)
+      scope[1].where(user: user)
     end
   end
 

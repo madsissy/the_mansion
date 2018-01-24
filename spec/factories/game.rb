@@ -3,6 +3,7 @@ require 'faker'
 FactoryBot.define do
   factory :game do |f|
     f.user
+    f.name "Test game"
     f.strength 5
     f.agility 6
     f.intelligence 3

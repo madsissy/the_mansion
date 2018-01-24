@@ -9,6 +9,9 @@ describe Game do
     it 'is invalid without a user_id' do
       expect(FactoryBot.build(:game, user_id: nil)).not_to be_valid
     end
+    it 'is invalid without a name' do
+      expect(FactoryBot.build(:game, name: nil)).not_to be_valid
+    end
     it 'is invalid without energy' do
       expect(FactoryBot.build(:game, energy: nil)).not_to be_valid
     end
