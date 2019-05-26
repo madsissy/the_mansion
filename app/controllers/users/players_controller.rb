@@ -1,7 +1,7 @@
-class Users::GamesController < ApplicationController
+class Users::PlayersController < ApplicationController
 
   def index
-    @games = policy_scope([:users, Game])
+    @players = current_user.players
   end
 
   def new
@@ -19,9 +19,5 @@ class Users::GamesController < ApplicationController
 
   def game_params
     params.require(:game).permit(:user, :energy, :hygiene, :arousal, :feminity, :will, :charisma, :strength, :agility, :intelligence)
-  end
-
-  def pundit_user
-    current_user
   end
 end

@@ -15,22 +15,35 @@ ActiveRecord::Schema.define(version: 20180124094859) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "games", force: :cascade do |t|
+  create_table "players", force: :cascade do |t|
     t.bigint "user_id"
-    t.string "name"
-    t.integer "strength"
-    t.integer "agility"
-    t.integer "will"
-    t.integer "charisma"
-    t.integer "intelligence"
+    t.string "firstname"
+    t.string "lastname"
+    t.integer "strength", default: 50
+    t.integer "agility", default: 50
+    t.integer "will", default: 100
+    t.integer "charisma", default: 50
+    t.integer "intelligence", default: 50
+    t.integer "hunger", default: 100
+    t.integer "thirst", default: 100
     t.integer "energy", default: 100
     t.integer "hygiene", default: 100
     t.integer "arousal", default: 0
     t.integer "feminity", default: 0
+    t.integer "money"
+    t.integer "bank_account_balance", default: 0
+    t.integer "eyes_color"
+    t.integer "hair_color"
+    t.integer "hair_length"
+    t.integer "lips_size"
+    t.integer "breast_size"
+    t.integer "ass_size"
+    t.integer "dick_size"
+    t.boolean "chastity", default: false
     t.text "relations"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_games_on_user_id"
+    t.index ["user_id"], name: "index_players_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -50,5 +63,5 @@ ActiveRecord::Schema.define(version: 20180124094859) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "games", "users"
+  add_foreign_key "players", "users"
 end

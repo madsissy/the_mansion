@@ -9,14 +9,7 @@ class User < ApplicationRecord
   ##############################################################
 
     # Has many
-      has_many :games, before_add: :validate_game_limit
+      has_many :players, before_add: :validate_game_limit
 
-  ##############################################################
 
-    # Methods
-
-      # A user can have only 3 games
-      def validate_game_limit(game)
-        raise Exception.new if games.size > 3
-      end
 end
