@@ -14,7 +14,7 @@ class PlayersController < ApplicationController
     @player = current_user.players.build(player_params)
     if @player.save
       @player.create_calendar
-      redirect_to start_path
+      redirect_to start_path(player_hashid: @player.hashid)
     else
       render :new
     end
@@ -31,7 +31,7 @@ class PlayersController < ApplicationController
   end
 
   def max_players_limit_for_user
-    redirect_to players_path if current_user.players.count >= 3
+    redirect_to players_path, flash: { error: "You can create only three games. Please delete one if you want to start a new adventure !" } if current_user.players.count >= 3
   end
 
   def player_params

@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 20190526152641) do
     t.integer "hygiene", default: 100
     t.integer "arousal", default: 0
     t.integer "feminity", default: 0
-    t.integer "money"
+    t.integer "money", default: 300
     t.integer "bank_account_balance", default: 0
     t.integer "eyes_color"
     t.integer "hair_color"

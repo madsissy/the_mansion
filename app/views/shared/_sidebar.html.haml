@@ -1,10 +1,25 @@
 .sidebar
   %h3 The Mansion
+  - if @current_player.present?
+    .row
+      %p= @current_player.calendar.now.strftime('%A, %m, %Y')
+      %p= @current_player.calendar.now.strftime('%H : %M')
+    .row
+      %p= @current_player.full_name
+    .row
+      %p= "Hunger: #{@current_player.hunger}"
+      %p= "Thirst: #{@current_player.thirst}"
+      %p= "Energy: #{@current_player.energy}"
+    .row
+      %p= "Money: #{@current_player.money} ¢" 
+
   - if user_signed_in?
-    = link_to "Sign out", destroy_user_session_path, method: :delete
+    .row
+      = link_to "Sign out", destroy_user_session_path, method: :delete
   - else
-    %ul
-      %li
-        = link_to "Sign in", new_user_session_path
-      %li
-        = link_to "Sign up", new_user_registration_path
+    .row
+      %ul
+        %li
+          = link_to "Sign in", new_user_session_path
+        %li
+          = link_to "Sign up", new_user_registration_path

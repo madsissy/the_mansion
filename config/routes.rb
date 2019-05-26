@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   # Pages
-  get '/start', to: 'pages#start' 
+  get '/start', to: 'story#start' 
   resources :players, only: [:new, :index, :create, :destroy]
 
 end
