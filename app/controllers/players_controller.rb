@@ -1,5 +1,6 @@
 class PlayersController < ApplicationController
   before_action :set_player, only: [:destroy]
+  before_action :max_players_limit_for_user, only: [:new, :create]
 
   def index
     @players = current_user.players
@@ -36,5 +37,9 @@ class PlayersController < ApplicationController
       :hair_color,
       :hair_length
     )
+  end
+
+  def max_players_limit_for_user
+    redirect_to player_path if current_user.players.count >= 3
   end
 end

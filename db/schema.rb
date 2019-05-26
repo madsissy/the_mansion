@@ -35,10 +35,10 @@ ActiveRecord::Schema.define(version: 20180124094859) do
     t.integer "eyes_color"
     t.integer "hair_color"
     t.integer "hair_length"
-    t.integer "lips_size"
-    t.integer "breast_size"
-    t.integer "ass_size"
-    t.integer "dick_size"
+    t.integer "lips_size", default: 0
+    t.integer "breast_size", default: 0
+    t.integer "ass_size", default: 0
+    t.integer "dick_size", default: 0
     t.boolean "chastity", default: false
     t.text "relations"
     t.datetime "created_at", null: false
