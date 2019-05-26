@@ -1,0 +1,8 @@
+<div class="container">
+  <h3>New Player</h3>
+  <%= simple_form_for @player do |f| %>
+    <%= f.input :firstname %>
+    <%= f.input :lastname %>
+    <%= f.button :submit %>
+  <% end %>
+</div>

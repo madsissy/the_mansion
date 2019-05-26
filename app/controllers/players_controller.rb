@@ -1,4 +1,4 @@
-class Users::PlayersController < ApplicationController
+class PlayersController < ApplicationController
 
   def index
     @players = current_user.players

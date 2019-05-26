@@ -3,7 +3,6 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  namespace :users do
-    resources :players, only: [:new, :index, :create, :destroy]
-  end
+  resources :players, only: [:new, :index, :create, :destroy]
+
 end
