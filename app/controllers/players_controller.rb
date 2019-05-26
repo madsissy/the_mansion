@@ -21,6 +21,7 @@ class PlayersController < ApplicationController
   end
 
   def destroy
+    @player.destroy
   end
 
   private

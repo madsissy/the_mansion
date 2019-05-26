@@ -1,0 +1,10 @@
+.container
+  %h3 Games
+  - if current_user.players.count < 3
+    = link_to 'New game', new_player_path
+  %ul
+    - @players.each do |player|
+      %li
+        .row
+          .col-md-6
+            = player.full_name
