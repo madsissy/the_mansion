@@ -41,4 +41,8 @@ class Player < ApplicationRecord
       self.hunger = 100   if hunger > 100
       self.thirst = 100   if thirst > 100
     end
+
+    def full_name
+      "#{firstname} #{lastname}"
+    end
 end

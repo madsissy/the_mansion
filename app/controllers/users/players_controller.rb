@@ -5,6 +5,7 @@ class Users::PlayersController < ApplicationController
   end
 
   def new
+    @player = Player.new
   end
 
   def create
@@ -17,7 +18,7 @@ class Users::PlayersController < ApplicationController
 
   private
 
-  def game_params
+  def player_params
     params.require(:game).permit(:user, :energy, :hygiene, :arousal, :feminity, :will, :charisma, :strength, :agility, :intelligence)
   end
 end
