@@ -9,6 +9,9 @@ class Player < ApplicationRecord
     # Belongs to
       belongs_to :user
 
+    # Has one
+      has_one :calendar
+
   ############################################
 
     # Validations

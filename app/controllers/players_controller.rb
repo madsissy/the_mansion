@@ -13,6 +13,7 @@ class PlayersController < ApplicationController
   def create
     @player = current_user.players.build(player_params)
     if @player.save
+      @player.create_calendar
       redirect_to root_path
     else
       render :new
@@ -29,6 +30,10 @@ class PlayersController < ApplicationController
     @player = Player.find(params[:id])
   end
 
+  def max_players_limit_for_user
+    redirect_to players_path if current_user.players.count >= 3
+  end
+
   def player_params
     params.require(:player).permit(
       :firstname,
@@ -37,9 +42,5 @@ class PlayersController < ApplicationController
       :hair_color,
       :hair_length
     )
-  end
-
-  def max_players_limit_for_user
-    redirect_to player_path if current_user.players.count >= 3
   end
 end

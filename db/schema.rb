@@ -10,10 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180124094859) do
+ActiveRecord::Schema.define(version: 20190526152641) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "calendars", force: :cascade do |t|
+    t.bigint "player_id"
+    t.datetime "now", default: "2030-05-13 07:00:00"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["player_id"], name: "index_calendars_on_player_id"
+  end
 
   create_table "players", force: :cascade do |t|
     t.bigint "user_id"
@@ -63,5 +71,6 @@ ActiveRecord::Schema.define(version: 20180124094859) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "calendars", "players"
   add_foreign_key "players", "users"
 end
