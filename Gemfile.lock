@@ -111,6 +111,10 @@ GEM
       haml (>= 4.0.6, < 6.0)
       html2haml (>= 1.0.1)
       railties (>= 5.1)
+    hashid-rails (1.2.2)
+      activerecord (>= 4.0)
+      hashids (~> 1.0)
+    hashids (1.0.5)
     html2haml (2.2.0)
       erubis (~> 2.7.0)
       haml (>= 4.0, < 6)
@@ -284,6 +288,7 @@ DEPENDENCIES
   faker
   guard-rspec
   haml-rails (~> 2.0)
+  hashid-rails (~> 1.0)
   jbuilder (~> 2.5)
   jquery-rails
   launchy

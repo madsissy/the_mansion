@@ -24,6 +24,7 @@ gem 'pundit'
 gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
+gem "hashid-rails", "~> 1.0"
 
 group :development, :test do
   gem 'pry-byebug'

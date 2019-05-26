@@ -4,7 +4,9 @@
     = link_to 'New game', new_player_path
   %ul
     - @players.each do |player|
-      %li
+      %li{id: "player-#{player.hashid}"}
         .row
           .col-md-6
             = player.full_name
+          .col-md-6
+            = link_to 'Supprimer', player_path(player), method: :delete, remote: true

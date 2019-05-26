@@ -1,5 +1,13 @@
 class Player < ApplicationRecord
-    after_update :capping_values
+    # Callbacks
+      after_update :capping_values
+
+  ############################################
+
+    # Gems
+      include Hashid::Rails
+
+  ############################################
 
     # Serialize
       serialize :relations, Hash
@@ -10,7 +18,7 @@ class Player < ApplicationRecord
       belongs_to :user
 
     # Has one
-      has_one :calendar
+      has_one :calendar, dependent: :destroy
 
   ############################################
 
