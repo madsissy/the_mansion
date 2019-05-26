@@ -14,11 +14,10 @@ class PlayersController < ApplicationController
     @player = current_user.players.build(player_params)
     if @player.save
       @player.create_calendar
-      redirect_to root_path
+      redirect_to start_path
     else
       render :new
     end
-    # redirect to intro
   end
 
   def destroy
