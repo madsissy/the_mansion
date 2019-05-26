@@ -12,8 +12,11 @@ class Player < ApplicationRecord
   ############################################
 
     # Validations
-      validates :firstname, presence: true
-      validates :lastname, presence: true
+      validates :firstname,   presence: true
+      validates :lastname,    presence: true
+      validates :eyes_color,  presence: true
+      validates :hair_color,  presence: true
+      validates :hair_length, presence: true
 
 
   ############################################

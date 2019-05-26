@@ -9,7 +9,7 @@ class User < ApplicationRecord
   ##############################################################
 
     # Has many
-      has_many :players, before_add: :validate_game_limit
+      has_many :players
 
 
 end
