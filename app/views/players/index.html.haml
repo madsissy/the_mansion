@@ -1,7 +1,7 @@
 .container
-  %h3 Games
+  %h3.mt30.mb30 Games
   - if current_user.players.count < 3
-    = link_to 'New game', new_player_path
+    = link_to 'New game', new_player_path, class: 'link-primary'
   %ul
     - @players.each do |player|
       %li{id: "player-#{player.hashid}"}
@@ -9,4 +9,4 @@
           .col-md-6
             = player.full_name
           .col-md-6
-            = link_to 'Supprimer', player_path(player), method: :delete, remote: true
+            = link_to 'Supprimer', player_path(player), method: :delete, class: 'link-primary', remote: true

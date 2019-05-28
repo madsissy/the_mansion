@@ -2,11 +2,9 @@
 @import "bootstrap";
 @import "font-awesome";
 
-// Variables
-@import 'variables'
+@import 'variables';
+@import 'base';
 
 // Components
 @import "components/sidebar";
-
-// Layouts
-@import "layouts/containers";
+@import "components/links";

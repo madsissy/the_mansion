@@ -1,5 +1,5 @@
 .sidebar
-  %h3 The Mansion
+  %h3.mt30.mb30.color-white Escape
   - if @current_player.present?
     .row
       %p= @current_player.calendar.now.strftime('%A, %m, %Y')
@@ -15,11 +15,11 @@
 
   - if user_signed_in?
     .row
-      = link_to "Sign out", destroy_user_session_path, method: :delete
+      = link_to "Sign out", destroy_user_session_path, method: :delete, class: 'link-primary'
   - else
     .row
       %ul
         %li
-          = link_to "Sign in", new_user_session_path
+          = link_to "Sign in", new_user_session_path, class: 'link-primary'
         %li
-          = link_to "Sign up", new_user_registration_path
+          = link_to "Sign up", new_user_registration_path, class: 'link-primary'

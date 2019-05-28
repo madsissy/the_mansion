@@ -6,8 +6,8 @@
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-  %body
-    .mansion-container
+  %body.bg-dark-grey
+    .content{style: 'margin-left: 250px;'}
       = render 'shared/sidebar'
       = render 'shared/flashes'
       = yield
