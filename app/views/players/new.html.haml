@@ -1,9 +1,18 @@
-.container
-  %h3 New Player
+.container.mt30
+  %h3.mb30 New Player
   = simple_form_for @player do |f|
-    = f.input :firstname
-    = f.input :lastname
-    = f.input :eyes_color, collection: Player.eyes_colors.map{|k, v| [k.gsub('_', ' '), k]}
-    = f.input :hair_color, collection: Player.hair_colors.map{|k, v| [k.gsub('_', ' '), k]}
-    = f.input :hair_length, collection: Player.hair_lengths.map{|k, v| [k.gsub('_', ' '), k]}
-    = f.button :submit
+    .row
+      .col-md-6
+        = f.input :firstname
+      .col-md-6
+        = f.input :lastname
+    .row
+      .col-md-4
+        = f.input :eyes_color, collection: Player.eyes_colors.map{|k, v| [k.gsub('_', ' '), k]}
+      .col-md-4
+        = f.input :hair_color, collection: Player.hair_colors.map{|k, v| [k.gsub('_', ' '), k]}
+      .col-md-4
+        = f.input :hair_length, collection: Player.hair_lengths.map{|k, v| [k.gsub('_', ' '), k]}
+    .row
+      .col-md-12.mt10
+        = f.button :submit, class: 'button-secondary'

@@ -7,7 +7,7 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body.bg-dark-grey
-    .content{style: 'margin-left: 250px;'}
-      = render 'shared/sidebar'
+    = render 'shared/sidebar'
+    .content-container
       = render 'shared/flashes'
       = yield
