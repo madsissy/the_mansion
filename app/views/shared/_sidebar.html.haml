@@ -6,12 +6,13 @@
       %p= @current_player.calendar.now.strftime('%H : %M')
     .row.mb10
       %p= @current_player.full_name
-    .row.mb10
-      %p= "Hunger: #{@current_player.hunger}"
-      %p= "Thirst: #{@current_player.thirst}"
-      %p= "Energy: #{@current_player.energy}"
-    .row.mb30
-      %p= "Money: #{@current_player.money} ¢"
+    .sidebar-card
+      .row.mb10
+        %p= "Hunger: #{@current_player.hunger}"
+        %p= "Thirst: #{@current_player.thirst}"
+        %p= "Energy: #{@current_player.energy}"
+      .row
+        %p= "Money: #{@current_player.money} ¢"
 
   - if user_signed_in?
     .row

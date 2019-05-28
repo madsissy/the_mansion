@@ -1,17 +1,7 @@
-.sidebar {
-  border-right: 1px solid $bg-grey;
-  width: 200px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  text-align: center;
-  z-index: 500;
-}
-
-.content-container {
-  position: fixed;
-  left: 200px;
-  max-width: 100%;
-  padding: 0 50px;
+.sidebar-card {
+  border: 1px solid $bg-grey;
+  padding: 10px 10px;
+  margin: 0px 30px 30px 30px;
+  color: $secondary;
+  border-radius: 4px;
 }
