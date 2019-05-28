@@ -1,16 +1,16 @@
 .sidebar
   %h3.mt30.mb30.color-white Escape
   - if @current_player.present?
-    .row
+    .row.mb30
       %p= @current_player.calendar.now.strftime('%A, %m, %Y')
       %p= @current_player.calendar.now.strftime('%H : %M')
-    .row
+    .row.mb10
       %p= @current_player.full_name
-    .row
+    .row.mb10
       %p= "Hunger: #{@current_player.hunger}"
       %p= "Thirst: #{@current_player.thirst}"
       %p= "Energy: #{@current_player.energy}"
-    .row
+    .row.mb30
       %p= "Money: #{@current_player.money} ¢"
 
   - if user_signed_in?
