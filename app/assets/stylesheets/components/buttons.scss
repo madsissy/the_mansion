@@ -1,11 +1,13 @@
 .button-primary{
   border-radius:4px; text-align:center; font-weight:700; color:$white !important; max-width:100%; display:inline-block; text-decoration:none !important; background-color:$primary; transition:all .2s;
-  &:hover{background-color:lighten($primary, 5%);}
+  &:hover{background-color:lighten($primary, 5%) !important;}
+  &:active{background-color:lighten($primary, 5%) !important;}
 }
 
 .button-secondary{
   border-radius:4px; text-align:center; font-weight:700; color:$white !important; max-width:100%; display:inline-block; text-decoration:none !important; background:$secondary; transition:all .2s;
-  &:hover{background:lighten($secondary, 5%);}
+  &:hover{background:lighten($secondary, 5%) !important;}
+  &:active{background:lighten($secondary, 5%) !important;}
 }
 
 .btn-default {

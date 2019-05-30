@@ -2,7 +2,7 @@ article, aside, audio, canvas, command, datalist, details, embed, figcaption, fi
 mark, rp, rt, ruby, summary, time {display:inline;}
 h1,h2,h3,h4,h6,.h1,.h2,.h3,.h4,.h5,.h6{margin:0; font-weight:normal; line-height:1.1; color: $white;}
 ul{padding-left:0;}
-p{margin-bottom:0; color: $white;}
+li,p{margin-bottom:0; color: $white;}
 figure{margin:0;}
 address{margin:0;}
 a{

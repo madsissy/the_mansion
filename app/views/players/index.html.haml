@@ -4,8 +4,8 @@
     = link_to 'New game', new_player_path, class: 'link-primary'
   %ul
     - @players.each do |player|
-      %li{id: "player-#{player.hashid}"}
-        .row
+      .row.mt10
+        %li{id: "player-#{player.hashid}"}
           .col-md-6
             = player.full_name
           .col-md-6
